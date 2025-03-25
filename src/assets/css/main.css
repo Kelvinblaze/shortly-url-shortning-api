@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --primary-cyan: hsl(180, 66%, 49%);
+    --primary-dark-violet: hsl(257, 27%, 26%);
+
+    /* Secondary Color */
+    --secondary-red: hsl(0, 87%, 67%);
+
+    /* Neutral Colors */
+    --neutral-gray: hsl(0, 0%, 75%);
+    --neutral-grayish-violet: hsl(257, 7%, 63%);
+    --neutral-very-dark-blue: hsl(255, 11%, 22%);
+    --neutral-very-dark-violet: hsl(260, 8%, 14%);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html,
+body {
+  font-family: "Poppins", serif;
+  font-size: 14px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .alignment {
+    @apply lg:w-[80%] w-[90%]  mx-auto;
+  }
+
+  .primary-btn {
+    @apply bg-primary-cyan hover:bg-[#29CFCF]/75 text-white py-2.5 px-8 rounded-full font-semibold;
+  }
+
+  .primary-dark-btn {
+    @apply bg-primary-dark-violet hover:bg-[#3b3054]/75 text-white py-2.5 px-8 rounded-full font-semibold;
+  }
+
+  .link-item {
+    @apply font-semibold text-neutral-grayish-violet hover:text-neutral-very-dark-blue cursor-pointer;
+  }
+}
